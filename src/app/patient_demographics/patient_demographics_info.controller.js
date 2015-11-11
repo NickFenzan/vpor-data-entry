@@ -30,7 +30,7 @@
         }
 
         function getJQuerySource() {
-            angular.element.get('https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', function (data) {
+            angular.element.get('http://miller.vein/library/js/jquery/current.js', function (data) {
                 vm.jquery = data;
             });
         }
