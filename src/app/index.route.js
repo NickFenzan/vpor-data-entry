@@ -8,29 +8,41 @@
     /** @ngInject */
     function routerConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
-                .state('patient_demographics', {
+                .state('assignment', {
                     abstract: true,
-                    url: '/patient-demographics',
-                    templateUrl: 'app/patient_demographics/patient_demographics_root.html',
-                    controller: 'PatientDemographicsRootController',
-                    controllerAs: 'pat_demo_root'
+                    url: '/assignment',
+                    templateUrl: 'app/assignment/assignment_root.html',
+                    controller: 'AssignmentRootController',
+                    controllerAs: 'assignment'
                 })
-                .state('patient_demographics.splash', {
+                .state('assignment.splash', {
                     url: '',
-                    templateUrl: 'app/patient_demographics/patient_demographics_splash.html'
+                    templateUrl: 'app/assignment/assignment_splash.html'
                 })
-                .state('patient_demographics.job_finished', {
-                    url: '/job-finished',
-                    templateUrl: 'app/patient_demographics/patient_demographics_job_finished.html'
+                .state('assignment.demographics', {
+                    url: '/demographics/:requestId',
+                    templateUrl: 'app/assignment/demographics.html',
+                    controller: 'DemographicsController',
+                    controllerAs: 'demographics'
                 })
-                .state('patient_demographics.info', {
-                    url: '/request/:requestId',
-                    templateUrl: 'app/patient_demographics/patient_demographics_info.html',
-                    controller: 'PatientDemographicsInfoController',
-                    controllerAs: 'pat_demo_info'
+                .state('assignment.followup', {
+                    url: '/follow-up/:requestId',
+                    templateUrl: 'app/assignment/followup.html',
+                    controller: 'FollowUpController',
+                    controllerAs: 'followup'
+                })
+                .state('assignment.procedure', {
+                    url: '/procedure/:requestId',
+                    templateUrl: 'app/assignment/procedure.html',
+                    controller: 'ProcedureController',
+                    controllerAs: 'procedure'
+                })
+                .state('assignment.finished', {
+                    url: '/finished',
+                    templateUrl: 'app/assignment/assignment_finished.html'
                 });
 
-        $urlRouterProvider.otherwise('/patient-demographics');
+        $urlRouterProvider.otherwise('/assignment');
     }
 
 })();

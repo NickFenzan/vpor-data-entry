@@ -1,15 +1,9 @@
 <h2>The story so far...</h2>
 <p>
-    This little section of the EMR will help us enter data into a website that 
-    can submit information to the government on our behalf. Submitting this 
-    information to the government requires special accreditation, so we 
-    can't submit the information without a third-party. By getting all of this 
-    information in before the end of the year, Miller Vein avoids a 2% penalty 
-    on all Medicare claims in 2017. We would have liked to start entering data 
-    earlier or automatically, but finding a website that could submit 
-    information for such a specialized practice was challenging. If we all pitch
-    in where we can we should be able to get it done. Next year, Athena will be
-    taking care of this for us.
+    Everyone did a great job with part 1! We entered all of the patient 
+    demographic information we had in our system for 2015! However, we still 
+    need to add our follow-ups and procedures, as well as any new patient 
+    demographics that may pop up.
 </p>
 <h2>Here's what we need to do</h2>
 <p>
@@ -19,7 +13,7 @@
     </a>.
 </p>
 <p>
-    Right now we have four sets of credentials. They cannot be used by multiple
+    We have four sets of credentials. They cannot be used by multiple
     people at the same time. This means that if one tells you it is already 
     signed in somewhere, try another. The usernames are as follows:
 </p>
@@ -39,7 +33,7 @@
 </p>
 <ol>
     <li>
-        <strong>EMR</strong> Click "Request New Patient"
+        <strong>EMR</strong> Click "Request New Assignment"
     </li>
     <li>
         <strong>EMR</strong>
@@ -47,7 +41,7 @@
     </li>
     <li>
         <strong>VPOR</strong>
-        Click "Add New Patient"
+        Navigate to the form you need to enter
     </li>
     <li>
         <strong>VPOR</strong> 
@@ -60,11 +54,11 @@
     </li>
     <li>
         <strong>EMR</strong> 
-        Click "Mark as Complete and Request New Patient" to
+        Click "Complete and Request New" to
         move on to the next patient and repeat the process. If this is the last 
-        patient you plan on doing right now click "Mark as Complete" instead.
+        patient you plan on doing right now click "Complete" instead.
     </li>
 </ol>
 
 <h2>Let's Go!</h2>
-<button class="btn btn-primary" ng-click="pat_demo_root.requestNewPatient()">Request New Patient</button>
+<button class="btn btn-primary" ng-click="assignment.requestNewAssignment()">Request New Assignment</button>
