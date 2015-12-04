@@ -10,7 +10,14 @@
             <button class="btn btn-primary pull-right" ng-click="followup.completeAndNew()">Complete and New</button>
         </div>
     </div>
-    <h2>{{followup.request.patient.firstName}} {{followup.request.patient.lastName}} ({{followup.request.patient.id}})</h2>
+    <h2>
+        <span ng-bind="followup.request.patient.firstName"></span> 
+        <span ng-bind="followup.request.patient.lastName"></span> 
+        (<span ng-bind="followup.request.patient.id"></span>)
+    </h2>
+    <div>
+        Encounter: {{followup.request.encounter.id}}
+    </div>
     <h3>Follow Up Information</h3>
     <table width="100%"  cellspacing="0" cellpadding="2" border="1">
         <tbody>
